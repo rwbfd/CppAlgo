@@ -1,2 +1,2 @@
 # CppAlgo
-This is a repository that specialize in Cpp Algorithms with lower level accelerations (such as multi-threading, simd and cuda).
+This is a repository that specialize in C++ algorithms with lower level accelerations.
