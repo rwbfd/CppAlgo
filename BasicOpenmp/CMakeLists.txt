@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.15)
+project(lesson0001)
+
+set(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -O3 -g -fPIC")
+add_executable(lesson0001 naive_impl.cpp)
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(lesson0001 PUBLIC OpenMP::OpenMP_CXX)
+endif()
+FIND_PACKAGE(Boost REQUIRED)
+INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
+TARGET_LINK_LIBRARIES(lesson0001 LINK_PUBLIC ${Boost_LIBRARIES} )
